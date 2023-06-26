@@ -1,0 +1,22 @@
+{{!-- Home page --}}
+<div class="container justify-content-center">
+  {{#each blogs as |blog|}}
+    <div class="card text-center m-4">
+      <div class="card-header">
+        {{blog.blog_title}}
+      </div>
+      <div class="card-body">
+        <h2>
+          <a href="/edit/{{blog.id}}">{{blog.blog_title}}</a>
+        </h2>
+        <p class="card-text">{{blog.blog_content}}</p>
+      </div>
+      <div class="card-footer text-body-secondary">
+        Created on: {{blog.blog_created}}
+      </div>
+      <div class="card card-body">
+      </div>
+    </div>
+  {{/each}}
+</div>
+  <script src="/js/edit.js"></script>
